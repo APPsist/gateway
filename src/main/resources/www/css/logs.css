@@ -1,0 +1,52 @@
+#search {
+	display: inline-block;
+}
+
+#highlight {
+	display: inline-block;
+	float: right;
+}
+
+div.log-entry {
+  line-height: 16px;
+}
+
+div.log-entry.odd {
+  background-color: #eee;
+}
+
+div.log-entry > div {
+	display: inline;
+	padding-right: 5px;
+	font-family: sans-serif;
+	font-size: 12px;
+	margin-top: 8px;
+}
+
+div.log-entry.debug {
+	color: #666666;
+}
+
+div.log-entry.info {
+	color: #000000;
+}
+
+div.log-entry.warn {
+	color: #ff9900;
+}
+
+div.log-entry.error {
+	color: #ff0000;
+}
+
+div.log-entry.highlighted {
+	background-color: #ffff99;
+}
+
+div.log-entry code {
+	white-space: pre-wrap;
+}
+
+div.log-entry > div.logLevel {
+	width: 50px;
+}

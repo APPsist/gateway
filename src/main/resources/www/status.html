@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>APPsist System Log</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/status.css">
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/handlebars-4.0.5.js"></script>
+<script type="text/javascript" src="js/status.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+  GATEWAY.init();
+});
+</script>
+<script id="tpl-service-row" type="text/x-handlebars-template">
+  <tr class="service-entry">
+    <td >{{id}}</td>
+    <td>{{version}}</td>
+	<td><span class="statusDisplay">{{status}}</span></td>
+	<td><button class="showConfigBtn">Show configuration</button></td>
+  </tr>
+</script>
+</head>
+<body>
+<div id="main">
+  <div id="header">
+    APPsist System Status
+  </div>
+  <div class="container">
+  	<div>
+  		Last update: <span id="lastUpdate">n/a</span>
+  		<button onclick="GATEWAY.update();">Refresh</button>
+  	</div>
+  	<table id="services">
+  	  <thead>
+        <tr>
+          <td>Service ID</td>
+          <td>Version</td>
+          <td>Status</td>
+          <td>Actions</td>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+</div>
+</body>
+</html>

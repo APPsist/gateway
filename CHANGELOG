@@ -1,0 +1,30 @@
+2.4.1 - 2016-07-07
+- [FIX] Updated transfer encoding handling of HTTP proxy.
+
+2.4.0 - 2016-06-22
+- [NEW] Added language bundle processing. 
+
+2.3.2 - 2016-06-09
+- [NEW] Added service status page.
+
+2.3.1 - 2016-06-08
+- [UPDATE] Added log level filtering to logs display.
+
+2.3.0 - 2016-06-03
+- [NEW] Added health check for services.
+- [NEW] Added common configuration for all services.
+
+2.2.1 - 2016-06-01
+- [UPDATE] Updated log display.
+
+2.2.0 - 2016-03-24
+- [NEW] Added web page to display logs.
+
+2.1.3 - 2016-03-24
+- [UPDATE] Updated logging.
+
+2.1.2 - 2016-03-01
+- [FIX] Fixed startup complete event propagation.
+
+2.1.0 - 2016-02-29
+- [NEW] Added startup complete event.

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>APPsist System Log</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/logs.css">
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/handlebars-4.0.5.js"></script>
+<script type="text/javascript" src="js/logs.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+  GATEWAY.init();
+});
+</script>
+<script id="tpl-log-entry" type="text/x-handlebars-template">
+  <div class="log-entry {{#if odd}}odd{{/if}}">
+    <div class="log-time">[{{date.$date}}</div>
+    <div class="log-level">{{level}}</div>
+    <div class="log-class">{{source.className}}]</div>
+    <div class="log-message"><code>{{{message}}}</code></div>
+  </div>
+</script>
+</head>
+<body>
+<div id="main">
+  <div id="header">
+    APPsist Log Entries
+  </div>
+  <div class="container">
+  	<div id="search">
+      <span>Last </span><input name="numInput" id="numInput" type="number" value="100"><span> entries with a level equal or higher than </span>
+      <select name="levelInput" id="levelInput">
+        <option value="ALL">ALL</option>
+        <option value="TRACE">TRACE</option>
+        <option value="DEBUG">DEBUG</option>
+        <option value="INFO" selected>INFO</option>
+        <option value="WARN">WARN</option>
+        <option value="ERROR">ERROR</option>
+        <option value="FATAL">FATAL</option>
+      </select>
+      <span>.</span>
+      <input type="checkbox" name="descInput" id="descInput" checked="checked"><span> Display in descending order.</span>
+      <button onclick="GATEWAY.update();">Refresh</button>
+  	</div>
+    <div id="highlight">
+      <span>Highlight: </span>
+      <input type="text" name="highlightInput" id="highlightInput" placeholder="">
+    </div>
+    <div id="logs">
+    </div>
+  </div>
+</div>
+</body>
+</html>

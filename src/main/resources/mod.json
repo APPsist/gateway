@@ -1,0 +1,12 @@
+{
+	"main" : "de.appsist.service.gateway.MainVerticle",
+
+	"description" : "The APPsist service gateway orchestrates the APPsist and system services to a executable runtime.",
+	"licenses" : ["The Apache Software License Version 2.0"],
+	"author" : "Simon Schwantzer",
+
+	"keywords": ["APPsist", "service"],
+	"homepage": "http://www.appsist.de/",
+
+	"auto-redeploy": true
+}
